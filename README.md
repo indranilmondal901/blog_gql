@@ -1,6 +1,6 @@
 # Blog Post Application
-Deployed url -  https://blog-gql-git-main-indranilmondal901s-projects.vercel.app/  
-[Click here for DEMO](https://blog-gql-git-main-indranilmondal901s-projects.vercel.app/)
+Deployed url -  https://blog-gql.vercel.app/  
+[Click here for DEMO](https://blog-gql.vercel.app/)
 ## Description
 This is a simple full-stack blog post application that allows users to view and add blog posts. The application uses React for the frontend, Node.js with GraphQL for the backend, and MongoDB as the database. It demonstrates basic CRUD operations with a responsive user interface and is designed to be functional across devices.
 
