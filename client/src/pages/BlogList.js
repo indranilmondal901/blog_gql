@@ -1,4 +1,9 @@
 import React, { useEffect, useState } from "react";
+import config from "../config.json";
+
+const mode = "Production"; //"Development"
+
+const SERVER_URL = mode === "Production" ? config.PROD_URL : config.DEV_URL;
 
 const BlogList = () => {
   const [loading, setLoading] = useState(true);
@@ -18,7 +23,7 @@ const BlogList = () => {
 
   const fetchBlogs = async () => {
     try {
-      const response = await fetch("http://localhost:8080/graphql", {
+      const response = await fetch(SERVER_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -51,7 +56,7 @@ const BlogList = () => {
     e.preventDefault();
 
     // Add new blog post
-    const response = await fetch("http://localhost:8080/graphql", {
+    const response = await fetch(SERVER_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
