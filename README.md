@@ -1,5 +1,6 @@
 # Blog Post Application
-
+Deployed url -  https://blog-gql-git-main-indranilmondal901s-projects.vercel.app/  
+[Click here for DEMO](https://blog-gql-git-main-indranilmondal901s-projects.vercel.app/)
 ## Description
 This is a simple full-stack blog post application that allows users to view and add blog posts. The application uses React for the frontend, Node.js with GraphQL for the backend, and MongoDB as the database. It demonstrates basic CRUD operations with a responsive user interface and is designed to be functional across devices.
 
@@ -67,6 +68,7 @@ npm start
 The server will start on `http://localhost:8080/graphql`.
 
 #### 5. Start the Frontend Application
+###### In Frontend (before starting change mode to "Production" or "Development" for SERVER_URL accordingly in pages/BlogList.js)
 Navigate to the frontend directory and run:
 ```bash
 npm start
