@@ -196,12 +196,12 @@ const BlogList = () => {
                   </button>
 
                   <div id="readmore">
-                    <a
+                    <p
                       onClick={() => handleToggleContent(blog.id)} // Toggle specific post's content
                       style={{ color: showContent[blog.id] ? "red" : "blue" }}
                     >
                       {showContent[blog.id] ? "Close" : "Read more"}
-                    </a>
+                    </p>
                   </div>
                   {showContent[blog.id] && (
                     <p className="blog-item-content">{blog.content}</p>

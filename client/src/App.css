@@ -280,7 +280,8 @@ body {
   }
 
   #readmore {
-    display: block;
+    display: flex;
+    justify-content: end;
   }
 
   .latest-blog{
@@ -389,7 +390,8 @@ body {
   }
 
   #readmore {
-    display: block;
+    display: flex;
+    justify-content: end;
   }
 
   .latest-blog{
