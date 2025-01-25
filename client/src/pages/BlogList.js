@@ -127,14 +127,14 @@ const BlogList = () => {
           Sort: {sortOrder === "asc" ? "Ascending" : "Descending"}
         </button>
       </div>
-
+      {/* Create Blog button */}
       <button
         onClick={() => setShowForm(!showForm)}
         className="blog-toggle-button"
       >
         {showForm ? "Close" : "Create Blog"}
       </button>
-
+      {/* create Blog Form */}
       {showForm && (
         <div className="blog-form-container">
           <h2 className="form-title">Create New Blog</h2>
@@ -164,35 +164,36 @@ const BlogList = () => {
           </form>
         </div>
       )}
-
-      {/* Blog List */}
+      {/* Loading showing */}
       {loading && <h6> Loading data....</h6>}
+      {/* Blog List */}
       <div className="main-section">
+        {/* focus blog */}
         <div className="latest-blog">
-            {console.log(loading, focus)}
-          {!loading && focus && Object.keys(focus).length > 0 &&
-          <div className="blog-item-title">
-            <img id="latest-blog-img"
-              src={
-                "https://placehold.jp/150x150.png"
-              }
-              alt={focus?.title}
-            />
-          </div>
-          }
+          {console.log(loading, focus)}
+          {!loading && focus && Object.keys(focus).length > 0 && (
+            <div className="blog-item-title">
+              <img
+                id="latest-blog-img"
+                src={"https://placehold.jp/150x150.png"}
+                alt={focus?.title}
+              />
+            </div>
+          )}
 
           <h3 className="blog-item-title">{focus.title}</h3>
-            <p className="blog-item-content">{focus.content}</p>
+          <p className="blog-item-content">{focus.content}</p>
         </div>
-
+        {/* other blog */}
         <div className="other-blog-scroll-sec">
           <ul className="blog-list">
             {!loading &&
               filteredBlogs.map((blog) => (
                 <li key={blog.id} className="blog-item">
                   <h3 className="blog-item-title">{blog.title}</h3>
-                  <button id="showbtn" onClick={() => setFocus(blog)}>show</button>
-
+                  <button id="showbtn" onClick={() => setFocus(blog)}>
+                    show
+                  </button>
 
                   <div id="readmore">
                     <a
@@ -206,8 +207,6 @@ const BlogList = () => {
                     <p className="blog-item-content">{blog.content}</p>
                   )}
                 </li>
-
-
               ))}
           </ul>
         </div>
