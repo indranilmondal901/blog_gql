@@ -125,3 +125,14 @@ mutation {
 ## Notes
 - Ensure MongoDB is running before starting the backend.
 - Customize styles in the frontend for a better user experience.
+
+
+## Images
+### > 768px (PC)
+![alt text](image.png)
+
+### > 480 && < 768 (Tablet)
+![alt text](image-1.png)
+
+### < 480px (Mobile)
+![alt text](image-2.png)
